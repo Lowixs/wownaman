@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to top, #ff7e5f, #feb47b);
+      color: #333;
+      text-align: center;
+      padding: 40px;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    h1 {
+      color: #ffffff;
+      font-size: 50px;
+      margin-bottom: 20px;
+      text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+      letter-spacing: 2px;
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #555;
+      line-height: 1.8;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      display: none;
+      opacity: 0;
+      transition: opacity 1s ease-in-out, transform 1s ease;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transform: translateY(30px);
+    }
+
+    .message p {
+      font-family: 'Georgia', serif;
+      color: #444;
+      font-size: 20px;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding-top: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .play-button, .show-text-button {
+      background-color: #ff66b2;
+      color: white;
+      font-size: 18px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .play-button:hover, .show-text-button:hover {
+      background-color: #ff3385;
+      transform: scale(1.1);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .play-button:active, .show-text-button:active {
+      transform: scale(1);
+      box-shadow: none;
+    }
+
+    .play-button:focus, .show-text-button:focus {
+      outline: none;
+    }
+
+    .show-text-button {
+      display: none;
+    }
+
+    .header-emoji {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    .desktop-mode {
+      max-width: 1200px;
+      font-size: 22px;
+      padding: 40px;
+      text-align: left;
+      margin-top: 50px;
+    }
+
+    .scrollable-content {
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 35px;
+      }
+
+      .message {
+        max-width: 90%;
+        padding: 20px;
+        font-size: 20px;
+      }
+
+      .message p {
+        font-size: 18px;
+      }
+
+      .play-button, .show-text-button {
+        padding: 12px 24px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1><span class="header-emoji">💌</span> Ano ba kasi 'to?! <span class="header-emoji">💌</span></h1>
+    <p>Click the button below to play the audio for a better experience! tapos dapat naka desktop mode ka 🤩</p>
+
+    <button class="play-button" id="playBtn">Play this for a better experience</button>
+
+    <button class="show-text-button" id="showTextBtn">Show the message</button>
+
+    <div class="scrollable-content">
+      <div class="message" id="message">
+        <p>2024 has been a year full of challenges and growth, hasn't it? It wasn't always easy, and there were times when I felt lost, unsure of where we were heading. But through all of it, I realized how much we've learned from each other. There were days when we barely spoke, when it felt like we were just existing in the same space, and there were other days when everything felt just right — those were the days that kept me going.</p>
+        <p>I’ll be honest, sometimes I got lost in my thoughts, and I wasn’t sure how to express what I was feeling. But I never doubted us. No matter the distance, no matter how quiet things got, I knew that we were still trying, and that’s what matters. The tough moments didn’t break us. They showed me how strong we are, how much we’re willing to fight for this. And through all of it, I’m thankful for you, for sticking around and reminding me that love isn't just about the good times, but about working through the bad ones together.</p>
+        <p>There were times when I wasn’t sure how to be there for you, when I couldn’t find the words to say what I was feeling. And maybe there were times when you needed me and I wasn’t the best version of myself. But no matter what, I never stopped caring. I think about how we’ve managed to hold onto each other even when it wasn’t easy. We’ve both had moments of doubt, moments when we were afraid to say what was really on our minds. But through it all, there’s this feeling I can’t shake: that no matter what, we belong together.</p>
+        <p>Even when we couldn’t find the right words, we still managed to connect, and that, to me, is the most important thing. In those quiet moments, I saw how much we’ve grown — how we’ve learned to be patient with each other, how we’ve learned to trust each other even more. It’s in those moments of silence, of discomfort, that I realized how real this is.</p>
+        <p>Looking back, I see all the ways we’ve changed — not just as individuals, but as a basta, hindi ko alam whahskahdah. We’ve seen each other at our best and our worst, and we’re still here. The mistakes, the misunderstandings, the things we didn’t quite get at first — they’ve all played a role in making us stronger. I think about how much you’ve taught me, even without realizing it. You’ve shown me how to love in ways I never thought I could.</p>
+        <p>I think about the little things you do, the way you care for me even when I’m not the easiest person to deal with. I’m not perfect, and I know I’ve made my mistakes, but I’m always learning, always trying. And I hope you know that I’m here for you, even on the days when I don’t know how to say it. You’re important to me, more than I can ever fully express.</p>
+        <p>I guess, more than anything, I want you to know that I’m not going anywhere. Even when I don’t say it, even when I pull away sometimes, I’m here. I’m still all in. I don’t want to go through this life with anyone else. I don’t want to be anywhere else but with you. I know we still have things to figure out, and there’s a lot ahead of us. But that’s okay. I’m ready to face it all with you. No matter how much time it takes, no matter what comes next, we’ll handle it together. You’re worth every second of it, and I’m grateful for you every single day.</p>
+        <p>As we close this chapter of 2024, I want you to know that I believe in us. I believe in what we’ve built together, and I believe in everything that’s ahead. The road won’t always be easy, but as long as we’re walking it side by side, I know we’ll make it. I’m looking forward to the next chapter, to the memories we’ll make and the lessons we’ll learn. I’m ready to keep growing with you, learning with you, and loving you. You’re my constant, and no matter what, I’ll be right here, with you.</p>
+      </div>
+    </div>
+
+    <audio id="audio" src="hehehe.mp3" preload="auto"></audio>
+  </div>
+
+  <script>
+    document.getElementById('playBtn').addEventListener('click', function() {
+      var audio = document.getElementById('audio');
+      audio.play();
+      this.disabled = true;
+      this.textContent = 'pindot mo this >>>';
+      document.getElementById('showTextBtn').style.display = 'inline-block';
+      
+      // Switch to desktop mode after clicking the button
+      document.body.classList.add('desktop-mode');
+    });
+
+    document.getElementById('showTextBtn').addEventListener('click', function() {
+      var message = document.getElementById('message');
+      message.style.display = 'block';
+      setTimeout(function() {
+        message.style.opacity = 1;
+        message.style.transform = 'translateY(0)';
+      }, 50);
+      
+      document.querySelector('h1').style.display = 'none';
+      document.querySelector('p').style.display = 'none';
+      this.style.display = 'none';
+      document.getElementById('playBtn').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>

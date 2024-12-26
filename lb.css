@@ -1,0 +1,78 @@
+body {
+    font-family: 'Patrick Hand', cursive;
+    background: #ffe6f0;
+    color: #3b3b3b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.book-wrapper {
+    position: relative;
+    width: 80%;
+    height: 80%;
+}
+
+.book {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-color: #ffccf2;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #ff4e5b;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: #ff4e5b;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e52b3e;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(0.95);
+}
